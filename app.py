@@ -118,20 +118,17 @@ def index():
     print('bye bye bye bye bye')
     logging.error('--------------------------eeeeeeeee-----------------------')
     print(os.getcwd())
-    try : 
-        db = 'books.db'
-        conn = sqlite3.connect(db)
-    except : print("first failed")
+    # except : print("first failed")
 
-    try : 
-        db = 'db/books.db'
-        conn = sqlite3.connect(db)
-    except : print("second failed")
+    # try : 
+        # db = 'db/books.db'
+        # conn = sqlite3.connect(db)
+    # except : print("second failed")
 
-    try : 
-        db = '../db/books.db'
-        conn = sqlite3.connect(db)
-    except : print("third failed")
+    # try : 
+        # db = '../db/books.db'
+        # conn = sqlite3.connect(db)
+    # except : print("third failed")
         
     return render_template('index.html')
 
