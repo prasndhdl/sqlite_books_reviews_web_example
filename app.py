@@ -5,7 +5,7 @@ import logging
 app = Flask(__name__)
 
 # Define the path to your SQLite database file
-DATABASE = 'C:/Users/prasn/Downloads/CSCI 514/sqlite_books_reviews_web_example/sqlite_books_reviews_web_example/db/books.db'
+DATABASE = 'books.db'
 
 @app.route('/api/books', methods=['GET'])
 def get_all_books():
