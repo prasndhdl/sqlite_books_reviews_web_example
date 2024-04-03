@@ -113,6 +113,7 @@ def add_book():
 # Route to render the index.html page
 @app.route('/')
 def index():
+    print('Hello hello hello hello hello')
     return render_template('index.html')
 
 if __name__ == '__main__':
