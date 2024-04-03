@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, render_template, request
 import sqlite3
+import logging
 
 app = Flask(__name__)
 
@@ -114,6 +115,7 @@ def add_book():
 @app.route('/')
 def index():
     print('Hello hello hello hello hello')
+    logging.error('--------------------------errr-----------------------')
     return render_template('index.html')
 
 if __name__ == '__main__':
