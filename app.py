@@ -115,7 +115,7 @@ def add_book():
 @app.route('/')
 def index():
     print('bye bye bye bye bye')
-    logging.error('--------------------------eeeeeeeee-----------------------')
+    logging.error('--------------------------ffffffff-----------------------')
     return render_template('index.html')
 
 if __name__ == '__main__':
