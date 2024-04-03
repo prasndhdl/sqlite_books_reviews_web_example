@@ -1,11 +1,13 @@
 from flask import Flask, jsonify, render_template, request
 import sqlite3
 import logging
+import os
 
 app = Flask(__name__)
 
 # Define the path to your SQLite database file
 DATABASE = 'C:/Users/prasn/Downloads/CSCI 514/sqlite_books_reviews_web_example/sqlite_books_reviews_web_example/db/books.db'
+DATABASE = os.path.join(os.getcwd(), 'db', 'books.db')
 
 @app.route('/api/books', methods=['GET'])
 def get_all_books():
@@ -114,8 +116,13 @@ def add_book():
 # Route to render the index.html page
 @app.route('/')
 def index():
-    print('bye bye bye bye bye')
-    logging.error('--------------------------ffffffff-----------------------')
+    logging.error('-----------LOG DEMO -----------------')
+    print(DATABASE)
+    print(os.getcwd())
+    try : 
+        conn = sqlite3.connect(DATABASE)
+    except : 
+        print('failed')
     return render_template('index.html')
 
 if __name__ == '__main__':
